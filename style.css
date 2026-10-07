@@ -3,3 +3,43 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.main{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.side-bar{
+    display: grid;
+    background-color: #1992D4;
+    width: 20%;
+    grid-template-columns: 100%;
+    grid-template-rows: 5vh 35vh 60vh;
+    gap: 40px;
+    padding : 20px 30px
+    
+}
+.upper{
+    display: grid;
+    grid-template-rows: repeat(6, calc(35vh / 6)) ;
+}
+.lower{
+    display: grid;
+    grid-template-rows: repeat(3, calc(30vh / 6))
+}
+.content-area{
+    display: grid;
+    background-color: aquamarine;
+    width: 80%;
+}
+
+.upper img, .lower img{
+    height: 30px;
+    width: 30px;
+}
+
+.heading img{
+    height: 40px;
+    width: 40px;
+}
