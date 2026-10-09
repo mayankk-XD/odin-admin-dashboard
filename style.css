@@ -1,7 +1,9 @@
+
 *{
-    padding : 0;
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
 .main{
@@ -17,24 +19,28 @@
     grid-template-columns: 100%;
     grid-template-rows: 5vh 35vh 60vh;
     gap: 40px;
-    padding : 20px 20px;
-    
+    padding: 20px 20px;
 }
+
 .upper{
     display: grid;
-    grid-template-rows: repeat(6, calc(35vh / 6)) ;
+    grid-template-rows: repeat(6, calc(35vh / 6));
 }
+
 .lower{
     display: grid;
-    grid-template-rows: repeat(3, calc(30vh / 6))
+    grid-template-rows: repeat(3, calc(30vh / 6));
 }
+
 .content-area{
     display: grid;
     background-color: aquamarine;
     width: 80%;
+    grid-template-rows: 180px 1fr;
+    min-height: 100vh;
 }
 
-.upper img, .lower img, .search img{
+.upper img, .lower img, .header img{
     height: 30px;
     width: 30px;
     color: white;
@@ -54,6 +60,7 @@
     font-size: 18px;
     color: white;
 }
+
 .heading h1{
     display: flex;
     align-items: center;
@@ -67,21 +74,13 @@
     filter: brightness(0) invert(1);
 }
 
-.content-area{
-    display: grid;
-    grid-template: 20vh 80vh / 100%
-}
-
 .header{
     display: grid;
-    background-color: khaki;
-    grid-template: 50% 50% / 20% 20% 20% 20% 20%
+    background-color: #FFFFFF;
+    grid-template: 50% 50% / 20% 20% 20% 20% 20%;
 }
-.content{
-    display: grid;
-    background-color: antiquewhite;
-}
-.search{
+
+.search, .profile-big{
     grid-column: 1 / 4;
     display: flex;
     align-items: center;
@@ -94,5 +93,68 @@
     width: 90%;
     border-radius: 20px;
     border: none;
-    background-color: white;
+    background-color: #E2E8F0;
+    padding-left: 15px;
+}
+
+.profile-small{
+    grid-column: 4 / 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.profile-big{
+    grid-row: 2;
+}
+
+.options{
+    grid-column: 4 / 6;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 12px;
+    padding: 0 20px;
+}
+
+.options button{
+    width: 100px;
+    height: 42px;
+    flex-shrink: 0;
+    background-color: #1992D4;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.options button:hover{
+    background-color: #147db5;
+}
+
+.content{
+    display: grid;
+    background-color: #E2E8F0;
+    grid-template-columns: 3fr 1fr;
+}
+
+.other-secton{
+    display: grid;
+    grid-row: 1fr 1fr;
+    gap: 15px;
+}
+
+.announcement, .trending{
+    display: flex;
 }
