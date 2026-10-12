@@ -46,9 +46,9 @@
     color: white;
 }
 
-.heading img{
-    height: 40px;
-    width: 40px;
+.heading img, .profile-big img{
+    height: 45px;
+    width: 45px;
     color: white;
 }
 
@@ -177,9 +177,10 @@
 }
 
 .announcement-card{
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    align-content: start;
+    gap: 15px;
 }
-
 .trending-card{
     grid-template-rows: repeat(4, 1fr);
 }
@@ -226,4 +227,58 @@
     width: 20px;
     height: 20px;
     cursor: pointer;
+}
+
+.trending-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.trending-item img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.trending-item div{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.trending-item p:first-child{
+    font-size: 14px;
+    font-weight: bold;
+    color: #222222;
+}
+
+.trending-item p:last-child, .announcement p:last-child{
+    font-size: 14px;
+    color: #666666;
+    
+}
+
+.announcements{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 0;
+}
+
+.announcement{
+    padding-bottom: 15px;
+    border-bottom: 1px solid #D2D2D2;
+}
+
+.announcement:last-child{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.profile-small img, .profile-big img{
+    border-radius: 50%;    
 }
